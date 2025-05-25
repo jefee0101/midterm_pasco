@@ -1,5 +1,4 @@
 body {
-    /* Animated dark blue gradient background */
     background: linear-gradient(270deg, #0f2027, #23395d, #2a5298, #0f2027);
     background-size: 800% 800%;
     animation: liveBlueBG 16s ease-in-out infinite;
@@ -10,21 +9,11 @@ body {
 }
 
 @keyframes liveBlueBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    25% {
-        background-position: 50% 100%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 0%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -34,23 +23,16 @@ body {
     justify-content: center;
 }
 
-.left-panel, .right-panel {
-    background: rgba(20, 34, 61, 0.95);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    padding: 40px 32px;
-    min-width: 320px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .left-panel {
     align-items: center;
     margin-right: 40px;
-    background: transparent; 
-    box-shadow: none;      
+    background: transparent; /* Transparent left panel */
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 400px;
 }
 
 .logo {
@@ -86,8 +68,16 @@ h2 {
 }
 
 .right-panel {
-    align-items: center;
+    background: rgba(20, 34, 61, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 40px 32px;
+    min-width: 320px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .login-form {
@@ -98,7 +88,7 @@ h2 {
     width: 100%;
 }
 
-.login-form .login-input {
+.login-input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -109,12 +99,14 @@ h2 {
     font-size: 1em;
 }
 
-.login-form .login-input:focus {
+.login-input:focus {
     outline: 2px solid #4f8cff;
     background: #1b2b47;
 }
 
-.login-form button {
+.login-link-button {
+    display: block;
+    text-align: center;
     width: 100%;
     padding: 12px;
     margin-top: 16px;
@@ -124,10 +116,11 @@ h2 {
     color: #fff;
     font-size: 1.1em;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-.login-form button:hover {
+.login-link-button:hover {
     background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
 }

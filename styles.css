@@ -1,0 +1,103 @@
+body {
+    /* Animated dark blue gradient background */
+    background: linear-gradient(270deg, #0f2027, #23395d, #2a5298, #0f2027);
+    background-size: 800% 800%;
+    animation: liveBlueBG 16s ease-in-out infinite;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f0f4f8;
+}
+
+@keyframes liveBlueBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    background: rgba(20, 34, 61, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 40px 32px;
+    max-width: 350px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 50%;
+    padding: 6px;
+    width: 132px;
+    height: 132px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.25);
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.15);
+    box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.18);
+    background: linear-gradient(135deg, #23395d 0%, #4f8cff 100%);
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #a7c7e7;
+    letter-spacing: 1px;
+}
+
+.login-form .login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #23395d;
+    color: #f0f4f8;
+    font-size: 1em;
+}
+
+.login-form .login-input:focus {
+    outline: 2px solid #4f8cff;
+    background: #1b2b47;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+}

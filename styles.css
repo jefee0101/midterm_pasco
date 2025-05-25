@@ -27,14 +27,30 @@ body {
     }
 }
 
-.login-container {
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-panel, .right-panel {
     background: rgba(20, 34, 61, 0.95);
     border-radius: 16px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     padding: 40px 32px;
-    max-width: 350px;
-    margin: 80px auto;
-    text-align: center;
+    min-width: 320px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-panel {
+    align-items: center;
+    margin-right: 40px;
+    background: transparent; 
+    box-shadow: none;      
 }
 
 .logo {
@@ -66,6 +82,20 @@ h2 {
     margin-bottom: 24px;
     color: #a7c7e7;
     letter-spacing: 1px;
+    text-align: center;
+}
+
+.right-panel {
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 220px;
+    width: 100%;
 }
 
 .login-form .login-input {
